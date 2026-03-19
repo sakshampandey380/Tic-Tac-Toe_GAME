@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Tic-Tac-Toe</title>
+
+    <link rel="stylesheet" href="game.css">
+
+    <!-- CONFETTI -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+<!-- MODE SELECT -->
+<div class="mode-container" id="mode">
+    <h2>Select Mode</h2>
+    <button onclick="startGame('single')">Single 🤖</button>
+    <button onclick="startGame('duo')">Duo 👥</button>
+</div>
+
+<!-- WIN POPUP -->
+<div class="msg-container hide">
+    <p id="msg"></p>
+    <button id="new-btn">New Game</button>
+</div>
+
+<!-- SCORE -->
+<div class="scoreboard">
+    <h3>O: <span id="scoreO">0</span></h3>
+    <h3>X: <span id="scoreX">0</span></h3>
+</div>
+
+<main>
+    <h1>Tic-Tac-Toe 🔥</h1>
+
+    <div class="container">
+        <div class="game">
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+        </div>
+    </div>
+
+    <button id="reset-btn">Reset</button>
+    <button id="theme-btn">🌙 Theme</button>
+
+<!-- TOGGLE -->
+<div class="toggle-container">
+    <span>🤖</span>
+
+    <label class="switch">
+        <input type="checkbox" id="mode-toggle">
+        <span class="slider"></span>
+    </label>
+
+    <span>👥</span>
+</div>
+
+<!-- FOOTER -->
+<footer class="premium-footer">
+    <p id="footer-text"></p>
+</footer>
+
+<script src="game.js"></script>
+</body>
+</html>
